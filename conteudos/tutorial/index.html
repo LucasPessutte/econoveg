@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Udema a modern educational site template">
+    <meta name="author" content="Ansonika">
+    <title>AnalisaItapê | Tutorial</title>
+
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="../../img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="../../img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="../../img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="../../img/apple-touch-icon-144x144-precomposed.png">
+
+    <!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- BASE CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/vendors.css" rel="stylesheet">
+    <link href="../../css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="../../css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="page" class="theia-exception">
+
+        <main style="min-height: 100vh">
+            <section id="hero_in" class="cart_section h-100" style="min-height: 100vh !important;">
+                <div class="wrapper-tutorial">
+                    <div class="container">
+                        <input type="hidden" id="etapa_atual" value="1">
+                        <div class="bs-wizard clearfix">
+                            <div id="etapa_1" class="bs-wizard-step active">
+                                <div class="text-center bs-wizard-stepnum">Etapa 1</div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <a onclick="ativar_etapa(1)" class="bs-wizard-dot c-pointer"></a>
+                            </div>
+
+                            <div id="etapa_2" class="bs-wizard-step disabled">
+                                <div class="text-center bs-wizard-stepnum">Etapa 2</div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <a onclick="ativar_etapa(2)" class="bs-wizard-dot c-pointer"></a>
+                            </div>
+
+                            <div id="etapa_3" class="bs-wizard-step disabled">
+                                <div class="text-center bs-wizard-stepnum">Etapa 3</div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                                <a onclick="ativar_etapa(3)" class="bs-wizard-dot c-pointer"></a>
+                            </div>
+
+                        </div>
+                        <!-- End bs-wizard -->
+                        <div class="div-imgs-tutorial">
+                            <img id="img-etapa-1" class="imgs-tutorial show" src="../../img/analisaimg/reqimg.png" alt="">
+                            <img id="img-etapa-2" class="imgs-tutorial hide" src="../../img/analisaimg/mocoesimg.png" alt="">
+                            <img id="img-etapa-3" class="imgs-tutorial hide" src="../../img/analisaimg/projetoimg.png" alt="">
+                        </div>
+                        <div>
+                            <button type="button" onclick="ant_etapa()" class="btn_1 rounded"><i class="fas fa-angle-double-left me-2"></i>Anterior</button>
+                            <a href="../../" class="btn_1 a-outline-white rounded">Pular Tutorial</a>
+                            <button type="button" onclick="prox_etapa()" class="btn_1 rounded">Próxima<i class="fas fa-angle-double-right ms-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--/hero_in-->
+        </main>
+        <!--/main-->
+
+    </div>
+    <!-- page -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/common_scripts.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../assets/validate.js"></script>
+
+
+    <script>
+        function ativar_etapa(n) {
+            $('.bs-wizard-step').addClass('disabled').removeClass('active');
+            $('#etapa_' + n).addClass('active').removeClass('disabled');
+        }
+
+        function prox_etapa() {
+            var prox = parseInt($('#etapa_atual').val()) + 1;
+            $('#etapa_' + prox).addClass('active').removeClass('disabled');
+            $('#etapa_atual').val(prox);
+            $('.imgs-tutorial').removeClass('show').addClass('hide');
+            $('#img-etapa-' + prox).addClass('show').removeClass('hide');
+        }
+
+        function ant_etapa() {
+            var ant = parseInt($('#etapa_atual').val()) - 1;
+            if (ant != 0) {
+                console.log(ant);
+                $('#etapa_' + parseInt($('#etapa_atual').val())).addClass('disabled').removeClass('active');
+                $('#etapa_' + ant).addClass('active').removeClass('disabled');
+                $('#etapa_atual').val(ant);
+                $('.imgs-tutorial').removeClass('show').addClass('hide');
+                $('#img-etapa-' + ant).addClass('show').removeClass('hide');
+            }
+        }
+    </script>
+</body>
+
+</html>
