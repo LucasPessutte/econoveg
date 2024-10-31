@@ -1,8 +1,8 @@
 <div class="container margin_120_95">
     <div class="row justify-content-between">
         <div class="col-lg-5 col-md-12">
-            <p><img src="../../img/logo.png" width="149" height="42" alt=""></p>
-            <p>O AnalisaItapê será seu aliado na participação política de Itapetininga. Sua opinião faz toda a diferença.</p>
+            <p><img src="../../img/econoveg_logo.png" width="149" height="42" alt=""></p>
+            <p>O econoveg será seu aliado para sua enomia.</p>
             <div class="follow_us">
                 <ul>
                     <li>Follow us</li>
@@ -19,7 +19,6 @@
         <div class="col-lg-3 col-md-6">
             <h5>Parceiros</h5>
             <ul class="contacts">
-                <li><a href="https://www.instagram.com/evolutionsoft/" target="_blank">EvolutionSoft</a></li>
                 <li><a href="https://fatecitapetininga.edu.br/" target="_blank">Fatec Itapetininga</a></li>
                 <li><a href="https://www.cps.sp.gov.br/" target="_blank">Centro Paula Souza</a></li>
             </ul>
@@ -29,7 +28,7 @@
     <hr>
     <div class="row">
         <div class="col-md-12">
-            <div id="copy">© AnalisaItapê</div>
+            <div id="copy">© EconoVeg</div>
         </div>
     </div>
 </div>

@@ -5,14 +5,14 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
     $sql = "SELECT * FROM users WHERE id = $user_id";
     $res = mysqli_query($conn, $sql);
     foreach ($res as $row) {
-        if ($row['profile_pic'] != "") {
-            $profile_pic = "data:image/png;base64," . $row['profile_pic'];
-        } else {
-            $profile_pic = "../../img/profiledefault.png";
-        }
+        // if ($row['profile_pic'] != "") {
+        //     $profile_pic = "data:image/png;base64," . $row['profile_pic'];
+        // } else {
+        //     $profile_pic = "../../img/profiledefault.png";
+        // }
         $name = $row['name'];
     }
-
+    
     $style_mainmenu = "style='top: 5px !important'";
 } else {
     $profile_pic = "";
@@ -24,7 +24,7 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
     <div data-loader="circle-side"></div>
 </div>
 <div id="logo">
-    <a href="../../"><img src="../../img/logo.png" width="149" height="42" alt=""></a>
+    <a href="../../"><img src="../../img/econoveg_logo.png" width="149" height="42" alt=""></a>
 </div>
 <ul id="top_menu">
     <li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
@@ -39,7 +39,7 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
         <li>
             <a href="../../login/" class="login"> &nbsp; </a>
         </li>
-        <li class="hidden_tablet"><a href="../../cadastro/" class="btn_1 a-outline-blue rounded">Cadastre-se</a></li>
+        <li class="hidden_tablet"><button type="button" class="btn btn-primary-econoveg">Criar Promoção</button></li>
     <?php } ?>
 
 </ul>
@@ -55,37 +55,17 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
     <ul>
         <li>
             <span>
-                <a href="../../">Home</a>
+                <a class="text-header" href="../../">Ínicio</a>
             </span>
         </li>
         <li>
             <span>
-                <a href="../../conteudos/projetos/">Município</a>
-            </span>
-            <ul>
-                <li><a href="../../conteudos/projetos/">Proposituras</a></li>
-                <li><a href="../../conteudos/transparencia/">Transparência</a></li>
-                <li><a href="../../conteudos/vereadores/">Vereadores</a></li>
-            </ul>
-        </li>
-        <li>
-            <span>
-                <a href="../../conteudos/projetos/">Projetos</a>
+                <a class="text-header" href="../../conteudos/projetos/">Minhas Promoções</a>
             </span>
         </li>
         <li>
             <span>
-                <a href="../../conteudos/artigos/">Artigos</a>
-            </span>
-        </li>
-        <li>
-            <span>
-                <a href="../../conteudos/sobre/">Sobre Nós</a>
-            </span>
-        </li>
-        <li>
-            <span>
-                <a href="../../conteudos/feedback">Feedbacks</a>
+                <a class="text-header" href="../../conteudos/artigos/">Denuncías</a>
             </span>
         </li>
         <!-- <li><span><a href="#0">Buy template</a></span></li> -->

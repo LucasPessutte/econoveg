@@ -40,45 +40,59 @@ if(isset($_SESSION['zKFmdhEHixG9Ej'])){
 
 </head>
 
-<body id="login_bg">
-
-    <nav id="menu" class="fake_menu"></nav>
-
-    <div id="preloader">
-        <div data-loader="circle-side"></div>
-    </div>
-    <!-- End Preload -->
-
-    <div id="login">
-        <aside>
-            <figure>
-                <a href="../"><img src="../img/logo.png" width="149" height="42" alt=""></a>
-            </figure>
-            <form action="../php/auth/login.php" method="post" autocomplete="off">
-                <div style="margin-top: 20vh;" class="form-group">
-                    <span class="input">
-                        <input class="input_field" type="email" autocomplete="off" name="login_email" id="login_email" required>
-                        <label class="input_label">
-                            <span class="input__label-content">Insira seu email</span>
-                        </label>
-                    </span>
-
-                    <span class="input">
-                        <input class="input_field" type="password" autocomplete="off" name="login_password" id="login_password" required>
-                        <i onclick="eye_toggle(this)" class="far fa-eye-slash fa-2x eye-password"></i>
-                        <label class="input_label">
-                            <span class="input__label-content">Digite sua senha</span>
-                        </label>
-                        <input id="check-toggle" type="checkbox" class="hide" value="0">
-                    </span>
-                    <small><a href="../esqueciMinhaSenha/">Esqueceu sua senha?</a></small>
+<body id="">
+    <div class="row" style="height: 100vh; width: 100vw; margin: 0">
+        <div class="col-6 container-form">
+            <div class="form-login-econoveg">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <img src="../img/econoveg_logo.png" style="width: 30%;" alt="">
+                    </div>
                 </div>
-                <button type="submit" class="btn_1 rounded full-width add_top_60">Login</button>
-                <div class="text-center add_top_10">Não é cadastrado? <strong><a href="../cadastro/">Cadastre-se!</a></strong></div>
-            </form>
-            <div class="copy">© 2022 AnalisaItapê</div>
-        </aside>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="input">
+                            <input class="input_field" type="email" autocomplete="off" name="login_email" id="login_email" required>
+                            <label class="input_label">
+                                <span class="input__label-content">Insira seu email</span>
+                            </label>
+                        </span>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="input">
+                            <input class="input_field" type="password" autocomplete="off" name="login_password" id="login_password" required>
+                            <i onclick="eye_toggle(this)" class="far fa-eye-slash fa-2x eye-password"></i>
+                            <label class="input_label">
+                                <span class="input__label-content">Digite sua senha</span>
+                            </label>
+                            <input id="check-toggle" type="checkbox" class="hide" value="0">
+                        </span>                        
+                    </div>
+                    <div class="col-12 text-right">
+                        <small><a href="../esqueciMinhaSenha/">Esqueceu sua senha?</a></small>
+                    </div>  
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-2">
+                        <button type="submit" style="width: 100%; height: 3rem" class="btn btn-primary-econoveg full-width add_top_60">Login</button>
+                    </div>
+                    <div class="col-12" style="justify-items: left;">
+                        <div class="text-center add_top_10">Não é cadastrado? <strong><a href="../cadastro/">Cadastre-se!</a></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6" id="img-login">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="../img/folha.png" alt="">
+                </div>
+            </div>
+        </div>
     </div>
+ 
     <?php
     if (isset($_SESSION['msg'])) {
         $n = 1;

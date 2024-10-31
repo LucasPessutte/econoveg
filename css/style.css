@@ -74,7 +74,7 @@ Author URI: http://themeforest.net/user/Ansonika/
         -webkit-transition: all 0.3s ease-in-out;
         -ms-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        color: #fff;
+        color: #212121;
     }
     .main-menu ul,
     .main-menu ul li {
@@ -94,7 +94,7 @@ Author URI: http://themeforest.net/user/Ansonika/
     }
     /*First level styles */
     .main-menu>ul>li span>a {
-        color: #fff;
+        color: #212121;
         padding: 0 8px 15px 8px;
         font-size: 14px;
         font-size: 0.875rem;
@@ -103,6 +103,7 @@ Author URI: http://themeforest.net/user/Ansonika/
         text-transform: uppercase;
     }
     .main-menu>ul>li span:hover>a {
+        color: #16A34A;
         opacity: 0.7;
     }
     /* Submenu*/
@@ -505,7 +506,7 @@ a.btn_1,
 .btn_1 {
     border: none;
     color: #fff;
-    background: #1CB4D5;
+    background: #16A34A;
     outline: none;
     cursor: pointer;
     display: inline-block;
@@ -692,6 +693,7 @@ a.btn_explore:hover {
 header {
     position: fixed;
     left: 0;
+    background-color: white;
     top: 0;
     width: 100%;
     padding: 20px 30px;
@@ -713,18 +715,6 @@ header {
     #logo {
         margin-top: 1vh;
     }
-}
-
-header.header.sticky {
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    /* background: #480048;
-    background: -webkit-linear-gradient(left, #480048, #C04848); */
-    background: linear-gradient(to right, #1CB4D5, #17a3c1);
-    padding: 15px 20px;
 }
 
 @media (max-width: 991px) {
@@ -776,11 +766,11 @@ ul#top_menu li:last-child {
 }
 
 ul#top_menu li a {
-    color: #fff;
+    color: #212121;
 }
 
 ul#top_menu li a:hover {
-    color: #fff;
+    color: #16A34A;
     opacity: 0.7;
 }
 
@@ -804,7 +794,7 @@ ul#top_menu li a.search-overlay-menu-btn:before {
     font-family: 'ElegantIcons';
     font-size: 24px;
     font-size: 1.5rem;
-    color: #fff;
+    color: #212121;
     text-indent: 0;
     position: absolute;
     left: 0;
@@ -4210,6 +4200,33 @@ section#reviews {
     width: 100%;
 }
 
+#img-login{
+    background: url('../img/bowSalada.jpg') center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    width: 50%;
+    align-content: center;
+}
+
+#img-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 163, 74, 0.6),
+        rgba(0, 166, 61, 0.6)  
+    );
+    z-index: 1;
+}
+
 #register_bg {
     background: url(http://via.placeholder.com/1600x1067/ccc/fff/bg_register.jpg) center center no-repeat fixed;
     -webkit-background-size: cover;
@@ -6035,7 +6052,6 @@ ul.bullets li:before {
     left: 0;
     top: 0;
 }
-
 
 /*-------- 3.4 Input forms --------*/
 

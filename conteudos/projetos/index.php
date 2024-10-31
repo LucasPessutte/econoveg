@@ -51,319 +51,179 @@ include_once('../../conn/conexao.php');
         </header>
         <!-- /header -->
 
-        <main>
-            <section id="hero_in" class="courses">
-                <div class="wrapper">
-                    <div class="container">
-                        <h1 class="fadeInUp"><span></span>Projetos</h1>
+        <main class="conteudo">
+            <div class="container-custom margin_60_35">
+            <div class="row">
+                <div class="col-4 mb-2">
+                    <div class="card card-product" style="width: 100%;">
+                        <a href="../detalhes/"><img class="img-product" src="../../img/hamburguerSoja.png" alt=""></a>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <span class="text-small">Horti Fruti Itapetininga</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="product-title">Cesta de frutas</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
+                                <div class="col-10">
+                                    <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
+                                        Visualizar produto
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-report" type="button">
+                                        <i class="icon-megaphone"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <!--/hero_in-->
-
-            <div class="filters_listing sticky_horizontal">
-                <div class="container">
-                    <ul class="clearfix">
-                        <li>
-                            <div class="switch-field">
-                                <input type="radio" id="all" name="listing_filter" value="all" checked>
-                                <label for="all">Todos</label>
-                                <input type="radio" id="popular" name="listing_filter" value="popular">
-                                <label for="popular">Populares</label>
-                                <input type="radio" id="latest" name="listing_filter" value="latest">
-                                <label for="latest">Recentes</label>
+                <div class="col-4 mb-2">
+                    <div class="card card-product" style="width: 100%;">
+                        <a href="../detalhes/"><img class="img-product" src="../../img/analisaimg/projetoimg.png" alt=""></a>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <span class="text-small">Horti Fruti Itapetininga</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="product-title">Cesta de frutas</span>
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="layout_view">
-                                <a id="btn-grid" class="c-pointer">
-                                    <i class="icon-th"></i>
-                                </a>
-                                <a id="btn-list" class="c-pointer active">
-                                    <i class="icon-th-list"></i>
-                                </a>
+                            <div class="row">
+                                <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
+                                <div class="col-10">
+                                    <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
+                                        Visualizar produto
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-report" type="button">
+                                        <i class="icon-megaphone"></i>
+                                    </button>
+                                </div>
                             </div>
-                        </li>
-                        <li>
-                            <select name="orderby" class="selectbox">
-                                <option value="category">Category</option>
-                                <option value="category 2">Literature</option>
-                                <option value="category 3">Architecture</option>
-                                <option value="category 4">Economy</option>
-                            </select>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
-                <!-- /container -->
+                <div class="col-4 mb-2">
+                    <div class="card card-product" style="width: 100%;">
+                        <a href="../detalhes/"><img class="img-product" src="../../img/analisaimg/projetoimg.png" alt=""></a>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <span class="text-small">Horti Fruti Itapetininga</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="product-title">Cesta de frutas</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
+                                <div class="col-10">
+                                    <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
+                                        Visualizar produto
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-report" type="button">
+                                        <i class="icon-megaphone"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mb-2">
+                    <div class="card card-product" style="width: 100%;">
+                        <a href="../detalhes/"><img class="img-product" src="../../img/hamburguerSoja.png" alt=""></a>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <span class="text-small">Horti Fruti Itapetininga</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="product-title">Cesta de frutas</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
+                                <div class="col-10">
+                                    <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
+                                        Visualizar produto
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-report" type="button">
+                                        <i class="icon-megaphone"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mb-2">
+                    <div class="card card-product" style="width: 100%;">
+                        <a href="../detalhes/"><img class="img-product" src="../../img/analisaimg/projetoimg.png" alt=""></a>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <span class="text-small">Horti Fruti Itapetininga</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="product-title">Cesta de frutas</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
+                                <div class="col-10">
+                                    <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
+                                        Visualizar produto
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-report" type="button">
+                                        <i class="icon-megaphone"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mb-2">
+                    <div class="card card-product" style="width: 100%;">
+                        <a href="../detalhes/"><img class="img-product" src="../../img/analisaimg/projetoimg.png" alt=""></a>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <span class="text-small">Horti Fruti Itapetininga</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="product-title">Cesta de frutas</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
+                                <div class="col-10">
+                                    <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
+                                        Visualizar produto
+                                    </button>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn btn-report" type="button">
+                                        <i class="icon-megaphone"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /filters -->
-
-            <div class="container margin_60_35">
-                <div class="row">
-                    <aside class="col-lg-3" id="sidebar">
-                        <div id="filters_col">
-                            <a data-bs-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filtros </a>
-                            <div class="collapse show" id="collapseFilters">
-                                <div class="filter_type">
-                                    <h6>Category</h6>
-                                    <ul>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck" checked>all <small>(945)</small>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">Architecture <small>(45)</small>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">Managment <small>(30)</small>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">Business <small>(25)</small>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">Litterature <small>(56)</small>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">Biology <small>(10)</small>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="filter_type">
-                                    <h6>Rating</h6>
-                                    <ul>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">
-                                                <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i> <small>(145)</small></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">
-                                                <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i> <small>(25)</small></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">
-                                                <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(68)</small></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">
-                                                <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(34)</small></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="icheck">
-                                                <span class="rating"><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(10)</small></span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--/collapse -->
-                        </div>
-                        <!--/filters col-->
-                    </aside>
-                    <!-- /aside -->
-
-                    <div class="col-lg-9" id="list_sidebar">
-                        <div class="grid-alt-row">
-                            <div class="grid-alt-col">
-                                <div class="box_list wow">
-                                    <div class="grid-alt-card row g-0">
-                                        <div class="grid-alt-figure col-lg-6">
-                                            <figure class="block-reveal">
-                                                <div class="block-horizzontal"></div>
-                                                <a href="../detalhes/"><img src="../../img/analisaimg/projetoimg.png" alt="">
-                                                    <div class="preview"><span>Detalhes do projeto</span></div>
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="grid-alt-info col-lg-6">
-                                            <div class="wrapper">
-                                                <!-- <a href="#0" class="wish_bt"></a> -->
-                                                <!-- <div class="price">$39</div> -->
-                                                <small>Category</small>
-                                                <h3>Persius delenit has cu</h3>
-                                                <p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-                                                <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-                                            </div>
-                                            <ul class="d-flex justify-content-end">
-                                                <!-- <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                                <li><i class="icon_like"></i> 890</li> -->
-                                                <li><a href="../detalhes/">+Ver mais</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-alt-col">
-                                <div class="box_list wow">
-                                    <div class="grid-alt-card row g-0">
-                                        <div class="grid-alt-figure col-lg-6">
-                                            <figure class="block-reveal">
-                                                <div class="block-horizzontal"></div>
-                                                <a href="../detalhes/"><img src="../../img/analisaimg/reqimg.png" alt="">
-                                                    <div class="preview"><span>Detalhes do projeto</span></div>
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="grid-alt-info col-lg-6">
-                                            <div class="wrapper">
-                                                <!-- <a href="#0" class="wish_bt"></a> -->
-                                                <!-- <div class="price">$39</div> -->
-                                                <small>Category</small>
-                                                <h3>Persius delenit has cu</h3>
-                                                <p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-                                                <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-                                            </div>
-                                            <ul class="d-flex justify-content-end">
-                                                <!-- <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                                <li><i class="icon_like"></i> 890</li> -->
-                                                <li><a href="../detalhes/">+Ver mais</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-alt-col">
-                                <div class="box_list wow">
-                                    <div class="grid-alt-card row g-0">
-                                        <div class="grid-alt-figure col-lg-6">
-                                            <figure class="block-reveal">
-                                                <div class="block-horizzontal"></div>
-                                                <a href="../detalhes/"><img src="../../img/analisaimg/mocoesimg.png" alt="">
-                                                    <div class="preview"><span>Detalhes do projeto</span></div>
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="grid-alt-info col-lg-6">
-                                            <div class="wrapper">
-                                                <!-- <a href="#0" class="wish_bt"></a> -->
-                                                <!-- <div class="price">$39</div> -->
-                                                <small>Category</small>
-                                                <h3>Persius delenit has cu</h3>
-                                                <p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-                                                <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-                                            </div>
-                                            <ul class="d-flex justify-content-end">
-                                                <!-- <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                                <li><i class="icon_like"></i> 890</li> -->
-                                                <li><a href="../detalhes/">+Ver mais</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-alt-col">
-                                <div class="box_list wow">
-                                    <div class="grid-alt-card row g-0">
-                                        <div class="grid-alt-figure col-lg-6">
-                                            <figure class="block-reveal">
-                                                <div class="block-horizzontal"></div>
-                                                <a href="../detalhes/"><img src="../../img/analisaimg/complementimg.png" alt="">
-                                                    <div class="preview"><span>Detalhes do projeto</span></div>
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="grid-alt-info col-lg-6">
-                                            <div class="wrapper">
-                                                <!-- <a href="#0" class="wish_bt"></a> -->
-                                                <!-- <div class="price">$39</div> -->
-                                                <small>Category</small>
-                                                <h3>Persius delenit has cu</h3>
-                                                <p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-                                                <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-                                            </div>
-                                            <ul class="d-flex justify-content-end">
-                                                <!-- <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                                <li><i class="icon_like"></i> 890</li> -->
-                                                <li><a href="../detalhes/">+Ver mais</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-alt-col">
-                                <div class="box_list wow">
-                                    <div class="grid-alt-card row g-0">
-                                        <div class="grid-alt-figure col-lg-6">
-                                            <figure class="block-reveal">
-                                                <div class="block-horizzontal"></div>
-                                                <a href="../detalhes/"><img src="../../img/analisaimg/indicaimg.png" alt="">,
-                                                    <div class="preview"><span>Detalhes do projeto</span></div>
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="grid-alt-info col-lg-6">
-                                            <div class="wrapper">
-                                                <!-- <a href="#0" class="wish_bt"></a> -->
-                                                <!-- <div class="price">$39</div> -->
-                                                <small>Category</small>
-                                                <h3>Persius delenit has cu</h3>
-                                                <p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-                                                <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-                                            </div>
-                                            <ul class="d-flex justify-content-end">
-                                                <!-- <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                                <li><i class="icon_like"></i> 890</li> -->
-                                                <li><a href="../detalhes/">+Ver mais</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-alt-col">
-                                <div class="box_list wow">
-                                    <div class="grid-alt-card row g-0">
-                                        <div class="grid-alt-figure col-lg-6">
-                                            <figure class="block-reveal">
-                                                <div class="block-horizzontal"></div>
-                                                <a href="../detalhes/"><img src="../../img/analisaimg/projresimg.png" alt="">
-                                                    <div class="preview"><span>Detalhes do projeto</span></div>
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="grid-alt-info col-lg-6">
-                                            <div class="wrapper">
-                                                <!-- <a href="#0" class="wish_bt"></a> -->
-                                                <!-- <div class="price">$39</div> -->
-                                                <small>Category</small>
-                                                <h3>Persius delenit has cu</h3>
-                                                <p>Dicam diceret ut ius, no epicuri dissentiet philosophia vix. Eam id legimus torquatos cotidieque, usu decore percipitur definitiones ex, nihil utinam recusabo mel no. </p>
-                                                <div class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></div>
-                                            </div>
-                                            <ul class="d-flex justify-content-end">
-                                                <!-- <li><i class="icon_clock_alt"></i> 1h 30min</li>
-                                                <li><i class="icon_like"></i> 890</li> -->
-                                                <li><a href="../detalhes/">+Ver mais</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /box_list -->
-                        <p class="text-center add_top_60"><a href="#0" class="btn_1 rounded">Load more</a></p>
-                    </div>
-                    <!-- /col -->
-                </div>
-                <!-- /row -->
+               
             </div>
             <!-- /container -->
         </main>
