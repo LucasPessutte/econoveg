@@ -1,4 +1,4 @@
-# WEB ANALISA ITAPE - FERRAMENTA DE ANÁLISE MUNICIPAL
+# EconoVeg - FERRAMENTA PARA BUSCA E POSTAGEM DE PRODUTOS
 
 
 ## 🛠 Stack utilizada
@@ -21,14 +21,8 @@ Bootstrap 5.0.2
 
 • Para rodar o projeto basta um servidor local ou uma hospedagem que possua o serviço de APACHE ou relacionados
 
-
-## 📝 Ambiente Online
-
-[AnalisaItape](https://evolutionsoft.dev.br/analisaitape/)
-
-
 ## 🧠 Desenvolvimento
 
 Projeto desenvolvido para TCC do curso de Análise e Desenvolvimento de Sistemas pela FATEC
 
-by [João Gabriel](https://github.com/jgg0d)
+by [Lucas Quintino](https://github.com/LucasPessutte)
