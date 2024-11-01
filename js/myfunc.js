@@ -71,3 +71,33 @@ function eye_toggle(obj, pos_input = 0, toggle_id = 'check-toggle') {
         input_toggle.type = "password";
     }
 }
+
+async function get_address_by_cep(cep){
+    let returnFunction = {};
+    try {
+        const formated_cep = cep.replace(/\D/g, '');
+        const url = `https://viacep.com.br/ws/${formated_cep}/json/`;
+    
+        const response = await fetch(url);
+
+        if(!response.ok){
+            throw new Error(`Erro ao buscar endereço: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        returnFunction = {
+            status: 1,
+            message: "Endereço resgatados com sucesso.",
+            data
+        }
+    } catch (error) {
+        returnFunction = {
+            status: 0,
+            message: "Erro ao buscar endereço: " + error.message,
+            data: {}
+        }
+    }
+
+    return returnFunction;
+}

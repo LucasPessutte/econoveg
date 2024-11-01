@@ -687,7 +687,6 @@
         border-radius: 0;
         color: #aaa;
         -webkit-appearance: none;
-        /* for box shadows to show on iOS */
         margin-top: 1em;
         padding: 1.3rem 0.15em;
         width: 100%;
@@ -764,4 +763,10 @@
       .form-cadastro-econoveg{
         width: 70%;
         justify-self: center;
+      }
+
+      .btn-secondary-econoveg{
+        background-color: #fff;
+        color: #212121!important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }

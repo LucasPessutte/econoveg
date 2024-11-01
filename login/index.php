@@ -43,46 +43,48 @@ if(isset($_SESSION['zKFmdhEHixG9Ej'])){
 <body id="">
     <div class="row" style="height: 100vh; width: 100vw; margin: 0">
         <div class="col-6 container-form">
-            <div class="form-login-econoveg">
-                <div class="row mb-5">
-                    <div class="col-12 text-center">
-                        <img src="../img/econoveg_logo.png" style="width: 30%;" alt="">
+            <form action="../php/auth/login.php" method="post" autocomplete="off">
+                <div class="form-login-econoveg">
+                    <div class="row mb-5">
+                        <div class="col-12 text-center">
+                            <img src="../img/econoveg_logo.png" style="width: 30%;" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <span class="input">
+                                <input class="input_field" type="email" autocomplete="off" name="login_email" id="login_email" required>
+                                <label class="input_label">
+                                    <span class="input__label-content">Insira seu email</span>
+                                </label>
+                            </span>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <span class="input">
+                                <input class="input_field" type="password" autocomplete="off" name="login_password" id="login_password" required>
+                                <i onclick="eye_toggle(this)" class="far fa-eye-slash fa-2x eye-password"></i>
+                                <label class="input_label">
+                                    <span class="input__label-content">Digite sua senha</span>
+                                </label>
+                                <input id="check-toggle" type="checkbox" class="hide" value="0">
+                            </span>                        
+                        </div>
+                        <div class="col-12 text-right">
+                            <small><a href="../esqueciMinhaSenha/" class="text-green">Esqueceu sua senha?</a></small>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <button type="submit" style="width: 100%; height: 3rem" class="btn btn-primary-econoveg full-width add_top_60">Login</button>
+                        </div>
+                        <div class="col-12" style="justify-items: left;">
+                            <div class="text-center add_top_10">Não é cadastrado? <strong><a href="../cadastro/" class="text-green">Cadastre-se!</a></strong></div>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="input">
-                            <input class="input_field" type="email" autocomplete="off" name="login_email" id="login_email" required>
-                            <label class="input_label">
-                                <span class="input__label-content">Insira seu email</span>
-                            </label>
-                        </span>
-                    </div>  
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="input">
-                            <input class="input_field" type="password" autocomplete="off" name="login_password" id="login_password" required>
-                            <i onclick="eye_toggle(this)" class="far fa-eye-slash fa-2x eye-password"></i>
-                            <label class="input_label">
-                                <span class="input__label-content">Digite sua senha</span>
-                            </label>
-                            <input id="check-toggle" type="checkbox" class="hide" value="0">
-                        </span>                        
-                    </div>
-                    <div class="col-12 text-right">
-                        <small><a href="../esqueciMinhaSenha/" class="text-green">Esqueceu sua senha?</a></small>
-                    </div>  
-                </div>
-                <div class="row">
-                    <div class="col-12 mb-2">
-                        <button type="submit" style="width: 100%; height: 3rem" class="btn btn-primary-econoveg full-width add_top_60">Login</button>
-                    </div>
-                    <div class="col-12" style="justify-items: left;">
-                        <div class="text-center add_top_10">Não é cadastrado? <strong><a href="../cadastro/" class="text-green">Cadastre-se!</a></strong></div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="col-6" id="img-login">
             <div class="row half-color">

@@ -2,28 +2,25 @@
 session_start();
 include_once('../../../conn/conexao.php');
 
-// FORM FIELDS
-if ($_FILES["profile_picture"]["tmp_name"] != "") {
-    $profile_picture = file_get_contents($_FILES["profile_picture"]["tmp_name"]);
-    $profile_picture = base64_encode($profile_picture);
-} else {
-    $profile_picture = "";
-}
-
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-// $password = hash('sha256', $password);
-$document = $_POST['document'];
-$birth_date = $_POST['birth_date'];
+$phone = $_POST['phone'];
+$cep = $_POST['cep'];
+$street = $_POST['street'];
+$neighborhood = $_POST['neighborhood'];
+$city = $_POST['city'];
+$state = $_POST['state'];
+$number = $_POST['number'];
 
-$sql = "INSERT INTO users (name, email, password, document, birth_date, profile_pic, terms) 
-    VALUES('$name', '$email', '$password', '$document','$birth_date', '$profile_picture', 1)";
+$sql = "INSERT INTO users (name, email, password, phone, cep, street, number, neighborhood, city, state) 
+    VALUES('$name', '$email', '$password', '$phone','$cep', '$street', '$number', '$neighborhood', '$city', '$state')";
+
+print_r($sql);
 $res = mysqli_query($conn, $sql);
 
 if ($res) {
     header('Location: ../../../login/');
-
     $_SESSION['msg'] = "<div class='ml-1 mr-1 mb-0 alert alert-success'>Usuário cadastrado com sucesso</div>";
 } else {
     header('Location: ../../../cadastro/');

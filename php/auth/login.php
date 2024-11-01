@@ -8,7 +8,7 @@ $email = anti_injection($_REQUEST['login_email']);
 $password = anti_injection($_REQUEST['login_password']);
 // $password = hash('sha256', $password);
 
-$sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password' AND status = 1 AND terms = 1";
+$sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
 $res = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($res) > 0){
