@@ -15,10 +15,10 @@ if(isset($_SESSION['zKFmdhEHixG9Ej'])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Udema a modern educational site template">
     <meta name="author" content="Ansonika">
-    <title>AnalisaItapê | Login</title>
+    <title>EconoVeg | Login</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/folha.png" type="image/x-icon">
     <link rel="apple-touch-icon" type="image/x-icon" href="../img/apple-touch-icon-57x57-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="../img/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="../img/apple-touch-icon-114x114-precomposed.png">
@@ -71,7 +71,7 @@ if(isset($_SESSION['zKFmdhEHixG9Ej'])){
                         </span>                        
                     </div>
                     <div class="col-12 text-right">
-                        <small><a href="../esqueciMinhaSenha/">Esqueceu sua senha?</a></small>
+                        <small><a href="../esqueciMinhaSenha/" class="text-green">Esqueceu sua senha?</a></small>
                     </div>  
                 </div>
                 <div class="row">
@@ -79,13 +79,13 @@ if(isset($_SESSION['zKFmdhEHixG9Ej'])){
                         <button type="submit" style="width: 100%; height: 3rem" class="btn btn-primary-econoveg full-width add_top_60">Login</button>
                     </div>
                     <div class="col-12" style="justify-items: left;">
-                        <div class="text-center add_top_10">Não é cadastrado? <strong><a href="../cadastro/">Cadastre-se!</a></strong></div>
+                        <div class="text-center add_top_10">Não é cadastrado? <strong><a href="../cadastro/" class="text-green">Cadastre-se!</a></strong></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-6" id="img-login">
-            <div class="row">
+            <div class="row half-color">
                 <div class="col-12 text-center">
                     <img src="../img/folha.png" alt="">
                 </div>
