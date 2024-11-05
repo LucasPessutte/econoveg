@@ -16,16 +16,9 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
         $password = $row['password'];
         // $document_type = $row['document_type'];
         // $document = $row['document'];
-        $birth_date = date('d/m/Y', strtotime($row['birth_date']));
-        $birth_date_input = $row['birth_date'];
         $create_date = date('d/m/Y', strtotime($row['create_date']));
         $update_date = $row['update_date'] ? date('d/m/Y', strtotime($row['update_date'])) : "Nunca alterado";
-
-        if ($row['profile_pic'] != "") {
-            $profile_pic = "data:image/png;base64," . $row['profile_pic'];
-        } else {
-            $profile_pic = "../../img/profiledefault.png";
-        }
+        $profile_pic = "../../img/profiledefault.png";
     }
 } else {
     $profile_pic = "";
@@ -160,15 +153,6 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
                                         </div>
                                         <div class="col-md-6">
                                             <ul class="list_3">
-                                                <li class="d-flex">
-                                                    <div class="me-2">
-                                                        <i class="fas fa-birthday-cake"></i>
-                                                    </div>
-                                                    <div>
-                                                        <b>Data de Nascimento</b>
-                                                        <p><?= $birth_date ?></p>
-                                                    </div>
-                                                </li>
                                                 <li class="d-flex">
                                                     <div class="me-2">
                                                         <i class="fas fa-user-edit"></i>

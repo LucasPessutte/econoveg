@@ -58,16 +58,20 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
                 <a class="text-header" href="../../">Ínicio</a>
             </span>
         </li>
-        <li>
-            <span>
-                <a class="text-header" href="../../conteudos/projetos/">Minhas Promoções</a>
-            </span>
-        </li>
-        <li>
-            <span>
-                <a class="text-header" href="../../conteudos/artigos/">Denuncías</a>
-            </span>
-        </li>
+        <?php if (isset($_SESSION['zKFmdhEHixG9Ej'])) { ?>
+            <li>
+                <span>
+                    <a class="text-header" href="./conteudos/projetos/">Minhas Promoções</a>
+                </span>
+            </li>
+        <?php } ?>
+        <?php if (isset($_SESSION['zKFmdhEHixG9Ej'])) { ?>
+            <li>
+                <span>
+                    <a class="text-header" href="./conteudos/artigos/">Denuncías</a>
+                </span>
+            </li>
+        <?php } ?>
         <!-- <li><span><a href="#0">Buy template</a></span></li> -->
     </ul>
 </nav>

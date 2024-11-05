@@ -77,7 +77,6 @@ async function get_address_by_cep(cep){
     try {
         const formated_cep = cep.replace(/\D/g, '');
         const url = `https://viacep.com.br/ws/${formated_cep}/json/`;
-    
         const response = await fetch(url);
 
         if(!response.ok){
