@@ -1,6 +1,21 @@
 <?php
 session_start();
 include_once('./conn/conexao.php');
+
+$is_set = isset($_SESSION['zKFmdhEHixG9Ej']);
+$class_col_button_view_product = $is_set ? 'col-10' : 'col-12';
+
+$sql = "SELECT * 
+    FROM products AS p
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM products_complaints AS pc
+        WHERE p.id = pc.product_id
+        GROUP BY pc.product_id
+        HAVING COUNT(*) >= 3
+    );";
+$res_products = mysqli_query($conn, $sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -54,174 +69,40 @@ include_once('./conn/conexao.php');
         <main class="conteudo">
             <div class="container-custom margin_60_35">
                 <div class="row">
-                    <div class="col-4 mb-2">
-                        <div class="card card-product" style="width: 100%;">
-                            <a href="../detalhes/"><img class="img-product" src="./img/hamburguerSoja.png" alt=""></a>
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <span class="text-small">Horti Fruti Itapetininga</span>
+                    <?php  foreach ($res_products as $row) { 
+                        $product_pic = "data:image/png;base64," . $row['product_pic'];   
+                    ?>
+                        <div class="col-4 mb-2">
+                            <div class="card card-product" style="width: 100%;">
+                                <a href="./conteudos/detalhes/index.php?id=<?= $row['id'] ?>"><img class="img-product" src="<?= $product_pic ?>" alt=""></a>
+                                <div class="card-body">
+                                    <div class="row mb-3">
+                                        <div class="col-12">
+                                            <span class="text-small"><?= $row['establishment_name'] ?></span>
+                                        </div>
+                                        <div class="col-12 column-title">
+                                            <span class="product-title"><?= $row['title'] ?></span>
+                                        </div>
                                     </div>
-                                    <div class="col-12">
-                                        <span class="product-title">Cesta de frutas</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
-                                    <div class="col-10">
-                                        <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
-                                            Visualizar produto
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-report" type="button">
-                                            <i class="icon-megaphone"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-2">
-                        <div class="card card-product" style="width: 100%;">
-                            <a href="../detalhes/"><img class="img-product" src="./img/analisaimg/projetoimg.png" alt=""></a>
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <span class="text-small">Horti Fruti Itapetininga</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span class="product-title">Cesta de frutas</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
-                                    <div class="col-10">
-                                        <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
-                                            Visualizar produto
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-report" type="button">
-                                            <i class="icon-megaphone"></i>
-                                        </button>
+                                    <div class="row">
+                                        <div class="col-12"><span class="text-new-price mb-1">R$ <?= $row['price'] ?></span></div>
+                                        <div class="<?= $class_col_button_view_product ?>">
+                                            <a href="./conteudos/detalhes/index.php?id=<?= $row['id'] ?>" class="btn btn-primary-econoveg" style="width: 100%;">
+                                                Visualizar produto
+                                            </a>
+                                        </div>
+                                        <?php if($is_set){ ?>
+                                            <div class="col-2">
+                                                <button class="btn btn-report" type="button">
+                                                    <i class="icon-megaphone"></i>
+                                                </button>
+                                            </div>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4 mb-2">
-                        <div class="card card-product" style="width: 100%;">
-                            <a href="../detalhes/"><img class="img-product" src="./img/analisaimg/projetoimg.png" alt=""></a>
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <span class="text-small">Horti Fruti Itapetininga</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span class="product-title">Cesta de frutas</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
-                                    <div class="col-10">
-                                        <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
-                                            Visualizar produto
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-report" type="button">
-                                            <i class="icon-megaphone"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-2">
-                        <div class="card card-product" style="width: 100%;">
-                            <a href="../detalhes/"><img class="img-product" src="./img/hamburguerSoja.png" alt=""></a>
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <span class="text-small">Horti Fruti Itapetininga</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span class="product-title">Cesta de frutas</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
-                                    <div class="col-10">
-                                        <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
-                                            Visualizar produto
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-report" type="button">
-                                            <i class="icon-megaphone"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-2">
-                        <div class="card card-product" style="width: 100%;">
-                            <a href="../detalhes/"><img class="img-product" src="./img/analisaimg/projetoimg.png" alt=""></a>
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <span class="text-small">Horti Fruti Itapetininga</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span class="product-title">Cesta de frutas</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
-                                    <div class="col-10">
-                                        <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
-                                            Visualizar produto
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-report" type="button">
-                                            <i class="icon-megaphone"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 mb-2">
-                        <div class="card card-product" style="width: 100%;">
-                            <a href="../detalhes/"><img class="img-product" src="./img/analisaimg/projetoimg.png" alt=""></a>
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <span class="text-small">Horti Fruti Itapetininga</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <span class="product-title">Cesta de frutas</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12"><span class="text-new-price mb-1">R$ 17,00</span></div>
-                                    <div class="col-10">
-                                        <button class="btn btn-primary-econoveg" style="width: 100%;" type="button">
-                                            Visualizar produto
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-report" type="button">
-                                            <i class="icon-megaphone"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
             <!-- /container -->

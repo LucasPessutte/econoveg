@@ -93,7 +93,7 @@
     .i-detalhes {
         font-size: 32px !important;
         font-size: 2rem !important;
-        color: #1CB4D5 !important;
+        color: #16A34A !important;
     }
     /* .class-rating-star:hover {
     color: #ffc1077e !important;
@@ -769,4 +769,11 @@
         background-color: #fff;
         color: #212121!important;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .column-title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
       }

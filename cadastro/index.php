@@ -181,7 +181,7 @@ if(isset($_SESSION['zKFmdhEHixG9Ej'])){
                                 <button type="submit" style="width: 70%; height: 3rem" class="btn btn-primary-econoveg full-width add_top_60">Cadastrar</button>
                             </div>
                             <div class="col-12" style="justify-items: left;">
-                                <button type="submit" style="width: 70%; height: 3rem" class="btn btn-secondary-econoveg full-width add_top_20">Voltar</button>
+                                <a href="../login/index.php" style="width: 70%; height: 3rem" class="btn btn-secondary-econoveg full-width add_top_20">Voltar</a>
                             </div>
                         </div>
                     </div>
