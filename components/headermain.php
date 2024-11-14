@@ -81,7 +81,7 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
                 <img src="<?= $profile_pic ?>" class="img-profile-nav">
             </a>
         </li>
-        <li class="hidden_tablet"><button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary-econoveg">Criar Promoção</button></li>
+        <li class="hidden_tablet"><button type="button" data-bs-toggle="modal" data-bs-target="#cadastrarProduto" class="btn btn-primary-econoveg">Criar Promoção</button></li>
     <?php } else { ?>
         <li>
             <a href="./login/" class="login"> &nbsp; </a>
@@ -107,7 +107,7 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
         <?php if (isset($_SESSION['zKFmdhEHixG9Ej'])) { ?>
             <li>
                 <span>
-                    <a class="text-header" href="./conteudos/projetos/">Minhas Promoções</a>
+                    <a class="text-header" href="./conteudos/minhasPromocoes/">Minhas Promoções</a>
                 </span>
             </li>
         <?php } ?>
@@ -132,11 +132,11 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
     </form>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="cadastrarProduto" tabindex="1" aria-labelledby="cadastrarProdutoLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Criar Produto</h5>
+        <h5 class="modal-title" id="cadastrarProdutoLabel">Criar Produto</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="./php/post/products/index.php" method="POST" enctype="multipart/form-data">

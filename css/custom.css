@@ -635,6 +635,16 @@
         color: #16A34A;
         border: 1px solid #16A34A;
     }
+    
+    .btn-danger-econoveg {
+        color: #BE2121;
+        border: 1px solid #BE2121;
+
+        &.filled{
+            background-color: #BE2121;
+            color: #fff;
+        }
+    }
 
     .text-new-price {
         color: #16A34A;
@@ -776,4 +786,8 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: inline-block;
+      }
+      
+      .modal-econoveg {
+        z-index: 999999999 !important;
       }

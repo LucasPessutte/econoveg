@@ -93,7 +93,7 @@ $res_products = mysqli_query($conn, $sql);
                                         </div>
                                         <?php if($is_set){ ?>
                                             <div class="col-2">
-                                                <button class="btn btn-report" type="button">
+                                                <button class="btn btn-report" onclick="openReport(<?= $row['id'] ?>)" type="button">
                                                     <i class="icon-megaphone"></i>
                                                 </button>
                                             </div>
@@ -109,6 +109,52 @@ $res_products = mysqli_query($conn, $sql);
         </main>
         <!--/main-->
 
+
+        <div class="modal modal-econoveg fade" id="denunciarProduto" tabindex="1" aria-labelledby="denunciarProdutoLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="denunciarProdutoLabel">Denunciar Produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="./php/post/denunciapromocao/index.php" method="POST">
+                        <input type="hidden" name="id_product_complaint" id="id_product_complaint">
+                        <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="input input--filled">
+                                            <select class="input_field" name="complaint_motive" id="complaint_motive" required>
+                                                <option value="">Motivo da Denúncia</option>
+                                                <option value="Fotos Inadequadas">Fotos Inadequadas</option>
+                                                <option value="Palavras de baixo calão">Palavras de baixo calão</option>
+                                                <option value="Promoção não existe">Promoção não existe</option>
+                                                <option value="Outros">Outros</option>
+                                            </select>
+                                            <label class="input_label">
+                                                <span class="input__label-content">Motivo da Denúncia</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="input input--filled">
+                                            <textarea rows="5" style="resize: none;" class="input_field" name="description_motive" id="description_motive" required>
+                                            </textarea>
+                                            <label class="input_label">
+                                                <span class="input__label-content">Descrição</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="reset"  style="width: 8rem" class="btn btn-secondary-econoveg" data-bs-dismiss="modal"><strong>Cancelar</strong></button>
+                                <button type="submit" style="width: 10rem" class="btn btn-danger-econoveg filled">Enviar Denúncia</button>
+                            </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+            
         <footer>
             <?php include('./components/footermain.php') ?>
         </footer>
@@ -156,6 +202,12 @@ $res_products = mysqli_query($conn, $sql);
                 content.innerHTML = '';
                 content.appendChild(img);
             }
+        }
+
+        function openReport(product_id){
+            console.log('OPEN REPORT')
+            const idReport = document.getElementById('id_product_complaint').value = product_id;
+            $('#denunciarProduto').modal('show');
         }
     </script>
 
