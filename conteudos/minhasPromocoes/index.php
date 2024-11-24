@@ -95,8 +95,8 @@ $res_products = mysqli_query($conn, $sql);
                                         </div>
                                         <?php if($is_set){ ?>
                                             <div class="col-2">
-                                                <button class="btn btn-danger-econoveg" type="button">
-                                                    <i class="icon-megaphone"></i>
+                                                <button class="btn btn-danger-econoveg" onclick="deleteProduct(<?= $row['id'] ?>)" type="button">
+                                                    <i class="icon-trash-3"></i>
                                                 </button>
                                             </div>
                                         <?php } ?>
@@ -272,7 +272,7 @@ $res_products = mysqli_query($conn, $sql);
 
 
         <footer>
-            <?php include('../../components/footermain.php') ?>
+            <?php include('../../components/footer.php') ?>
         </footer>
         <!--/footer-->
     </div>
@@ -285,6 +285,7 @@ $res_products = mysqli_query($conn, $sql);
     <script src="../../assets/validate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
     <script src="../../js/myfunc.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         $(document).ready(() => {
@@ -359,6 +360,53 @@ $res_products = mysqli_query($conn, $sql);
                 }
             })
             .catch(error => console.error('Erro:', error));
+        }
+
+        function deleteProduct(id){
+            Swal.fire({
+                title: "Aviso!",
+                text: "Você deseja realmente excluir esse produto?",
+                icon: "warning",
+                showCancelButton: true, 
+                confirmButtonColor: "#16A34A",
+                cancelButtonColor: "#c3c3c3",
+                confirmButtonText: "Sim, excluir!",
+                cancelButtonText: "Cancelar",
+                reverseButtons: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Processando...",
+                        text: "Por favor, aguarde enquanto o produto é excluído.",
+                        icon: "info",
+                        allowOutsideClick: false,
+                        showConfirmButton: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        },
+                    });
+                    $.post('./functions/deleteProduct.php', {id: id}, (data) => {
+                        Swal.close();
+                        if (data == "OK") {
+                            Swal.fire({
+                                position: "center-middle",
+                                icon: "success",
+                                text: "Produto excluído com sucesso!",
+                                showConfirmButton: true,
+                            }).then(() => {
+                                location.reload();
+                            });
+                        } else {
+                            Swal.fire({
+                                position: "center-middle",
+                                icon: "error",
+                                text: "Erro ao excluir o produto!",
+                                showConfirmButton: true,
+                            });
+                        }
+                    });
+                }
+            });
         }
     </script>
 

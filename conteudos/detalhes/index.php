@@ -25,7 +25,11 @@ foreach($res_product as $row_product){
     $city = $row_product['city'];
     $state = $row_product['state'];
     $cep = $row_product['cep'];
+    $price = $row_product['price'];
+    $old_price = $row_product['old_price'];
+    $product_pic = "data:image/png;base64," . $row_product['product_pic'];
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -123,14 +127,17 @@ foreach($res_product as $row_product){
 
                         <aside class="col-lg-4" id="sidebar">
                             <div class="box_detail">
-                                <figure>
-                                    <a class="video"><img src="../../img/analisaimg/reqimg.png" alt="" class="img-fluid"></a>
-                                </figure>
-                                <div class="price">
-                                    Nome do projeto
-                                </div>
-                                <div class="btn-review">
-                                    <a href="#comments" class="btn_1 full-width outline"><i class="fas fa-comment me-2"></i>Comentários</a>
+                                <img src="<?= $product_pic ?>" alt="" class="img-product">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span style="font-size: 1.0rem;">Preço</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span class="price-econoveg">R$<?= $price ?></span>
+                                    </div>
+                                    <div class="col-2" style="align-content: center;">
+                                        <span class="old-price">R$<?= $old_price ?></span>
+                                    </div>
                                 </div>
                             </div>
                         </aside>

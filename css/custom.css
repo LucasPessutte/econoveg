@@ -791,3 +791,16 @@
       .modal-econoveg {
         z-index: 999999999 !important;
       }
+
+      .price-econoveg{
+        font-weight: 700;
+        font-size: 2rem;
+        color: #16A34A;
+        margin-bottom: 1rem;
+      }
+
+      .old-price{
+        text-decoration: line-through;
+        font-size: 1.2rem;
+        opacity: 0.5;
+      }

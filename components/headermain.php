@@ -111,13 +111,6 @@ if (isset($_SESSION['zKFmdhEHixG9Ej'])) {
                 </span>
             </li>
         <?php } ?>
-        <?php if (isset($_SESSION['zKFmdhEHixG9Ej'])) { ?>
-            <li>
-                <span>
-                    <a class="text-header" href="./conteudos/artigos/">Denuncías</a>
-                </span>
-            </li>
-        <?php } ?>
         <!-- <li><span><a href="#0">Buy template</a></span></li> -->
     </ul>
 </nav>
